@@ -13,14 +13,15 @@ public class calculoImc {
 		
 		List<DadosPessoais> list = LerArquivoService.calcularIMC();
 			
-			System.out.println("Resultados:");
+		/*System.out.println("Resultados:");
+		 //caso deseje imprimir o resultado no console do java.
 			for (DadosPessoais d : list) {
 				double imc = d.getPeso() / Math.pow(d.getAltura(), 2);
 				System.out.println(d.getNome().toUpperCase() 
 						+ " " + d.getSobrenome().toUpperCase() 
 						+ " " 
 						+ new DecimalFormat(".##").format(imc));
-			}
+			}*/
 			
 			GerarArquivoService.gerarArquivoIMC(list);
 		}
